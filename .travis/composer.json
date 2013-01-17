@@ -1,0 +1,23 @@
+{
+    "name": "superdweebie/validator",
+    "description": "Library of validators",
+    "type": "library",
+    "keywords": [],
+    "homepage": "http://github.com/superdweebie/validator",
+    "authors": [
+        {
+            "name": "Tim Roediger",
+            "email": "superdweebie@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "zendframework/zendframework": "dev-master"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Sds\\Validator": "lib/"
+        }
+    }
+}

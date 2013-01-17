@@ -1,4 +1,6 @@
-validator
+Validator
 =========
 
-A collection of validators in both php and js
+Library of validators.
+
+[![Build Status](https://secure.travis-ci.org/superdweebie/validator.png)](http://travis-ci.org/superdweebie/validator)
