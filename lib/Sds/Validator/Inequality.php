@@ -43,35 +43,39 @@ class Inequality extends AbstractValidator
             case self::GREATER_THAN:
                 if ( ! ($this->compareValue > $value)){
                     $result = false;
-                    $messages[] = 'Must be less than ' . $this->compareValue;
+                    $messages[] = 'Must be less than ' . $this->stringify($this->compareValue);
                 }
                 break;
             case self::GREATER_THAN_EQUAL:
                 if ( ! ($this->compareValue >= $value)){
                     $result = false;
-                    $messages[] = 'Must be less than or equal to ' . $this->compareValue;
+                    $messages[] = 'Must be less than or equal to ' . $this->stringify($this->compareValue);
                 }
                 break;
             case self::LESS_THAN:
                 if ( ! ($this->compareValue < $value)){
                     $result = false;
-                    $messages[] = 'Must be greater than ' . $this->compareValue;
+                    $messages[] = 'Must be greater than ' . $this->stringify($this->compareValue);
                 }
                 break;
             case self::LESS_THAN_EQUAL:
                 if ( ! ($this->compareValue <= $value)){
                     $result = false;
-                    $messages[] = 'Must be greater than or equal to ' . $this->compareValue;
+                    $messages[] = 'Must be greater than or equal to ' . $this->stringify($this->compareValue);
                 }
                 break;
             case self::NOT_EQUAL;
                 if ( ! ($this->compareValue != $value)){
                     $result = false;
-                    $messages[] = 'Must not be equal to ' . $this->compareValue;
+                    $messages[] = 'Must not be equal to ' . $this->stringify($this->compareValue);
                 }
                 break;
         }
 
         return new ValidatorResult($result, $messages);
+    }
+
+    protected function stringify($value){
+        return $value;
     }
 }

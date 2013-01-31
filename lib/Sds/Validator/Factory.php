@@ -11,7 +11,7 @@ namespace Sds\Validator;
  * @since   1.0
  * @author  Tim Roediger <superdweebie@gmail.com>
  */
-class ValidatorFactory
+class Factory
 {
 
     public static function create($arg1, $arg2 = null){
@@ -52,6 +52,6 @@ class ValidatorFactory
             $validators[] = self::create($validatorDefinition);
         }
 
-        return new ValidatorGroup($validators);
+        return new Group($validators);
     }
 }

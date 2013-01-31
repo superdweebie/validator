@@ -11,13 +11,13 @@ namespace Sds\Validator;
  * @since   1.0
  * @author  Tim Roediger <superdweebie@gmail.com>
  */
-class PersonalName extends ValidatorGroup
+class PersonalName extends Group
 {
 
     public function __construct(){
         $this->validators = [
-            new LengthValidator(1, 50),
-            new AlphaValidator()
+            new Length(1, 50),
+            new Alpha()
         ];
     }
 }

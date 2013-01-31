@@ -11,7 +11,7 @@ namespace Sds\Validator;
  * @since   1.0
  * @author  Tim Roediger <superdweebie@gmail.com>
  */
-class ValidatorGroup extends AbstractValidator
+class Group extends AbstractValidator
 {
 
     protected $validators = [];

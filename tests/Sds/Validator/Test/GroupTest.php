@@ -2,15 +2,15 @@
 
 namespace Sds\Validator\Test;
 
-use Sds\Validator\ValidatorGroup;
+use Sds\Validator\Group;
 use Sds\Validator\Length;
 use Sds\Validator\Alpha;
 
-class ValidatorGroupTest extends \PHPUnit_Framework_TestCase {
+class GroupTest extends \PHPUnit_Framework_TestCase {
 
     public function testValidator(){
 
-        $validator = new ValidatorGroup([
+        $validator = new Group([
             new Length(1, 5),
             new Alpha()
         ]);

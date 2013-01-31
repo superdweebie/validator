@@ -6,14 +6,12 @@
  */
 namespace Sds\Validator;
 
-use Zend\Validator\EmailAddress as ZendEmailAddress;
-
 /**
  *
  * @since   1.0
  * @author  Tim Roediger <superdweebie@gmail.com>
  */
-class EmailAddress extends AbstractValidator
+class Cvv extends AbstractValidator
 {
 
     public function isValid($value){
@@ -22,10 +20,11 @@ class EmailAddress extends AbstractValidator
 
         $result = true;
 
-        $validator = new ZendEmailAddress();
-        if ( ! $validator->isValid($value) ){
+        if (
+            ! preg_match('/^\d\d\d$/', $value)
+        ){
             $result = false;
-            $messages[] = 'Must be a valid email address';
+            $messages[] = 'Cvv not valid format';
         }
 
         return new ValidatorResult($result, $messages);

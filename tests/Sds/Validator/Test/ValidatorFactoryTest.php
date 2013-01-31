@@ -2,9 +2,9 @@
 
 namespace Sds\Validator\Test;
 
-use Sds\Validator\ValidatorFactory;
+use Sds\Validator\Factory;
 
-class ValidatorFactoryTest extends \PHPUnit_Framework_TestCase {
+class FactoryTest extends \PHPUnit_Framework_TestCase {
 
     protected $class = 'Sds\Validator\Length';
 
@@ -14,12 +14,12 @@ class ValidatorFactoryTest extends \PHPUnit_Framework_TestCase {
     ];
 
     public function testSingleClassArg(){
-        $validator = ValidatorFactory::create($this->class);
+        $validator = Factory::create($this->class);
         $this->assertInstanceOf($this->class, $validator);
     }
 
     public function testClassAndOptionsArg(){
-        $validator = ValidatorFactory::create($this->class, $this->options);
+        $validator = Factory::create($this->class, $this->options);
         $this->assertInstanceOf($this->class, $validator);
         $this->assertTrue($validator->isValid('12')->getResult());
         $this->assertFalse($validator->isValid('1')->getResult());
@@ -27,7 +27,7 @@ class ValidatorFactoryTest extends \PHPUnit_Framework_TestCase {
     }
 
     public function testSingleArrayArg(){
-        $validator = ValidatorFactory::create(['class' => $this->class, 'options' => $this->options]);
+        $validator = Factory::create(['class' => $this->class, 'options' => $this->options]);
         $this->assertInstanceOf($this->class, $validator);
         $this->assertTrue($validator->isValid('12')->getResult());
         $this->assertFalse($validator->isValid('1')->getResult());
@@ -35,11 +35,11 @@ class ValidatorFactoryTest extends \PHPUnit_Framework_TestCase {
     }
 
     public function testMultipleArrayArg(){
-        $validator = ValidatorFactory::create([
+        $validator = Factory::create([
             ['class' => $this->class, 'options' => $this->options],
             ['class' => $this->class, 'options' => $this->options]
         ]);
-        $this->assertInstanceOf('Sds\Validator\ValidatorGroup', $validator);
+        $this->assertInstanceOf('Sds\Validator\Group', $validator);
         $this->assertTrue($validator->isValid('12')->getResult());
         $this->assertFalse($validator->isValid('1')->getResult());
         $this->assertFalse($validator->isValid('123')->getResult());

@@ -6,14 +6,14 @@
  */
 namespace Sds\Validator;
 
-use Zend\Validator\EmailAddress as ZendEmailAddress;
+use Zend\Validator\CreditCard as ZendCreditCard;
 
 /**
  *
  * @since   1.0
  * @author  Tim Roediger <superdweebie@gmail.com>
  */
-class EmailAddress extends AbstractValidator
+class CreditCard extends AbstractValidator
 {
 
     public function isValid($value){
@@ -22,10 +22,10 @@ class EmailAddress extends AbstractValidator
 
         $result = true;
 
-        $validator = new ZendEmailAddress();
+        $validator = new ZendCreditCard();
         if ( ! $validator->isValid($value) ){
             $result = false;
-            $messages[] = 'Must be a valid email address';
+            $messages[] = 'Must be a valid credit card';
         }
 
         return new ValidatorResult($result, $messages);

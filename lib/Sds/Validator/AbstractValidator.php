@@ -15,25 +15,25 @@ abstract class AbstractValidator implements ValidatorInterface
 {
 
     //haltOnPass: boolean
-    //     If this validator is part of a ValidatorGroup, setting
+    //     If this validator is part of a validator Group, setting
     //     to true will stop any Validators after this one
     //     from executing if this validator passes
     protected $haltOnPass = false;
 
     //haltOnFail: boolean
-    //     If this validator is part of a ValidatorGroup, setting
+    //     If this validator is part of a validator Group, setting
     //     to true will stop any Validators after this one
     //     from executing if this validator fails
     protected $haltOnFail = false;
 
     //skipOnPass:
-    //     If this validator is part of a ValidatorGroup, setting
+    //     If this validator is part of a validator Group, setting
     //     to true will skip evaluating this validator, if all previous
     //     validators have already evaluated to true
     protected $skipOnPass = false;
 
     //skipOnFail:
-    //     If this validator is part of a ValidatorGroup, setting
+    //     If this validator is part of a validator Group, setting
     //     to true will skip evaluating this validator, if a previous
     //     validator has already evaluated to false
     protected $skipOnFail = false;
