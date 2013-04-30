@@ -8,11 +8,11 @@
          convertWarningsToExceptions="true"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="tests/bootstrap.php"
+         bootstrap="bootstrap.php"
 >
     <testsuites>
         <testsuite name="Sds Common Test Suite">
-            <directory>./tests/Sds/Validator/Test/</directory>
+            <directory>./Sds/Validator/Test/</directory>
         </testsuite>
     </testsuites>
 

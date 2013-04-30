@@ -26,7 +26,6 @@ class CreditCardExpiryTest extends \PHPUnit_Framework_TestCase {
             [false, new Expiry('001', '2013')],
             [false, new Expiry('00', '2013')],
             [false, new Expiry('13', '2013')],
-            [true, new Expiry('1', '2013')],
             [false, new Expiry('1', '2010')],
             [true, new Expiry($thisMonth, $thisYear)],
             [false, new Expiry($lastMonth, $lastMonthYear)],

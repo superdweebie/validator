@@ -12,13 +12,15 @@
     ],
     "require": {
         "php": ">=5.4",
-        "superdweebie/common": "dev-master",
-        "zendframework/zend-validator": "2.*"
+        "superdweebie/common": "~0.3",
+        "zendframework/zend-validator": "~2.1"
     },
-
     "autoload": {
         "psr-0": {
             "Sds\\Validator": "lib/"
         }
+    },
+    "config": {
+        "github-protocols": ["http", "https", "git"]
     }
 }

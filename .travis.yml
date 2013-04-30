@@ -2,8 +2,12 @@ language: php
 
 php:
   - 5.4
+  - 5.5
 
 before_script:
   - cp .travis/composer.json ./
-  - wget -nc http://getcomposer.org/composer.phar
-  - php composer.phar install
+  - composer update --prefer-source --dev
+
+script:
+  - cd ./tests
+  - phpunit
