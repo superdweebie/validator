@@ -5,8 +5,7 @@ php:
   - 5.5
 
 before_script:
-  - cp .travis/composer.json ./
-  - composer update --prefer-source --dev
+  - composer update --dev
 
 script:
   - cd ./tests
