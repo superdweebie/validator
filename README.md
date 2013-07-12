@@ -1,4 +1,4 @@
-Don't use this anymore. Check out <a href="http://zoopcommerce.github.io/mystique">MystiqueM</a>
+Don't use this anymore. Check out <a href="http://zoopcommerce.github.io/mystique">Mystique</a>
 
 Validator
 =========
