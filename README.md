@@ -1,3 +1,5 @@
+Don't use this anymore. Check out <a href="http://zoopcommerce.github.io/mystique">MystiqueM</a>
+
 Validator
 =========
 
